@@ -1,2 +1,14 @@
 name: A worflow for github actions
 on: push
+
+jobs:
+    build:
+        name: hello world actions
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v1
+            - uses: ./action-a
+                with:
+                    MY_NAME: "brad"
+                
+            
